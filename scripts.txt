@@ -1,0 +1,95 @@
+create table sample(id int,text varchar(20));
+insert into sample (id,text) values ('1','padma');
+insert into sample (id,text) values ('2','raji');
+insert into sample (id,text) values ('3','vasu');
+insert into sample (id,text) values ('4','deva');
+select * from sample;
+ID	TEXT
+2	raji
+4	deva
+1	padma
+3	vasu
+4	deva
+insert into sample (id,text) values ('5','balaji');
+insert into sample (id,text) values ('6','vyshu');
+insert into sample (id,text) values ('7','harika');
+insert into sample (id,text) values ('8','sravani');
+select * from sample;
+ID	TEXT
+2	raji
+4	deva
+8	sravani
+1	padma
+3	vasu
+4	deva
+5	balaji
+6	vyshu
+7	harika
+
+select Text As Name from sample where Text='padma';
+
+NAME
+padma
+
+select * from sample where id=1;
+
+ID	TEXT
+1	padma
+
+select Text As Name from sample where Text<>'padma';
+NAME
+raji
+deva
+sravani
+vasu
+deva
+balaji
+vyshu
+harika
+
+
+create table EMPLOYEEDETAILS (ID INT, EMPNAME VARCHAR(200), EMPSALARY INT);
+
+INSERT INTO EMPLOYEEDETAILS (ID,EMPNAME,EMPSALARY) VALUES ('1', 'EMPLOYEE 1' , '2000');
+INSERT INTO EMPLOYEEDETAILS (ID,EMPNAME,EMPSALARY) VALUES ('2', 'EMPLOYEE 2' , '10000');
+INSERT INTO EMPLOYEEDETAILS (ID,EMPNAME,EMPSALARY) VALUES ('3', 'EMPLOYEE 3' , '20000');
+INSERT INTO EMPLOYEEDETAILS (ID,EMPNAME,EMPSALARY) VALUES ('4', 'EMPLOYEE 4' , '3000');
+INSERT INTO EMPLOYEEDETAILS (ID,EMPNAME,EMPSALARY) VALUES ('5', 'EMPLOYEE 5' , '40000');
+
+SELECT * FROM EMPLOYEEDETAILS;
+
+ID	EMPNAME	EMPSALARY
+3	EMPLOYEE 3	20000
+4	EMPLOYEE 4	3000
+1	EMPLOYEE 1	2000
+2	EMPLOYEE 2	10000
+3	EMPLOYEE 3	20000
+4	EMPLOYEE 4	3000
+5	EMPLOYEE 5	40000
+1	EMPLOYEE 1	2000
+1	EMPLOYEE 1	2000
+5	EMPLOYEE 5	40000
+2	EMPLOYEE 2	10000
+1	EMPLOYEE 1	2000
+2	EMPLOYEE 2	10000
+3	EMPLOYEE 3	20000
+4	EMPLOYEE 4	3000
+5	EMPLOYEE 5	40000
+
+SELECT DISTINCT EMPNAME FROM EMPLOYEEDETAILS;
+
+EMPNAME
+EMPLOYEE 2
+EMPLOYEE 1
+EMPLOYEE 3
+EMPLOYEE 4
+EMPLOYEE 5
+
+SELECT * FROM EMPLOYEEDETAILS WHERE EMPSALARY BETWEEN 1000 AND 10000;
+SELECT DISTINCT EMPNAME FROM EMPLOYEEDETAILS;
+
+SELECT * FROM EMPLOYEEDETAILS WHERE EMPNAME IS NULL;
+
+INSERT INTO EMPLOYEEDETAILS (ID,EMPNAME,EMPSALARY) VALUES ('6', ' ' , '35000');
+
+select * from EMPLOYEEDETAILS order by id
