@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+   <patients>
+      <patient>
+         <name>padma</name>
+         <age>22</age>
+         <height>6</height>
+         <weight>55</weight>
+         <disease>
+             <disease1>fewer</disease1>
+             <disease>cough</disease>
+         </disease>
+      </patient>
+      <patient>
+         <name>mahesh</name>
+         <age>22</age>
+         <height>5.5</height>
+         <weight>50</weight>
+         <disease>
+             <disease1>headache</disease1>
+             <disease>bzckpain</disease>
+         </disease>
+      </patient>
+   </patients>
+</data>
